@@ -68,11 +68,18 @@ console.log(!isOpen);
 
 
 
-let myAgeIs = 18
-let drivingLincenseValid = false;
+let myAgeIs = 15
+let drivingLincenseValid = true;
 
-if (myAgeIs >= 18 && drivingLincenseValid) {
-    console.log("Your are eligible for driving")
-} else{
-    console.log("You are not eligible ")
-}
+// if (myAgeIs >= 18 && drivingLincenseValid) {
+//     console.log("Your are eligible for driving")
+// } else{
+//     console.log("You are not eligible ")
+// }
+
+console.log(myAgeIs>=18? "you are eligible for driving":"you are not eligible")
+
+let score = 60;
+
+let result = score >=60?"Pass":"Fail";
+console.log(result)
