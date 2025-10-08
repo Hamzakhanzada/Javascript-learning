@@ -48,24 +48,52 @@
 //     console.log(items.textContent)
 // })
 
-let p = document.querySelector("p")
-p.innerHTML = "<b>Updated</b> by Js"
+// let p = document.querySelector("p")
+// p.innerHTML = "<b>Updated</b> by Js"
 
 
-let img = document.querySelector("img")
-console.log(img.getAttribute("src")
-)
+// let img = document.querySelector("img")
+// console.log(img.getAttribute("src")
+// )
 
-let a = document.querySelector("a").setAttribute("href","https://www.sheryians.com")
+// let a = document.querySelector("a").setAttribute("href","https://www.sheryians.com")
 
 
 
-let div = document.createElement("div");
+// let div = document.createElement("div");
 
-div.textContent = "title"
-let di =  document.body.append(div);
+// div.textContent = "title"
+// let di =  document.body.append(div);
 
-div.setAttribute("title","Hello")
+// div.setAttribute("title","Hello")
+
+
+let cr = document.createElement("li");
+
+cr.textContent = "mango";
+
+document.querySelector("ul").append(cr)
+
+ 
+let img = document.createElement("img")
+img.setAttribute("src","https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary-1200x675.webp")
+
+let div = document.createElement("div")
+document.body.prepend(div)
+div.prepend(img)
+
+let li = document.querySelectorAll("ul li:nth-child(2n)")
+// ul.remove()
+
+li.forEach((cur) => {
+    cur.classList.add("highlight")
+
+})
+
+li.classList.add("highlight")
+
+
+
 
 
 
