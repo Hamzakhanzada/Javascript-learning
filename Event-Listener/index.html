@@ -6,8 +6,27 @@
     <title>Event Listener</title>
   </head>
   <style>
-    h3 {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    html,body {
+        height: 100%;
+        width: 100%;
+    }
+    h1 {
+        user-select: none;
         text-transform: capitalize;
+    }
+    #main {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-color: cadetblue;
     }
   </style>
   <body>
@@ -22,14 +41,19 @@
     <button class="btn">Download</button>
     <input type="text"> -->
 
-    <h3 id="selectcar">Select Your Cars</h3>
+    <!-- <h3 id="selectcar">Select Your Cars</h3>
     <select>
         <option selected disabled>Choose Your Cars</option>
         <option value="civic">Civic</option>
         <option value="bmw">BMW</option>
         <option value="porshe">Porshe</option>
         <option value="corolla">Corolla</option>
-    </select>
+    </select> -->
+
+    <div id="main">
+    <h1>A</h1>
+    </div>
+    
     <script src="script.js"></script>
   </body>
 </html>
