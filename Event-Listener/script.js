@@ -68,20 +68,49 @@
 
 let form = document.querySelector("form");
 let inputs = document.querySelectorAll("input");
+let main =  document.querySelector("#main")
 
 form.addEventListener("submit",function (dets) {
     dets.preventDefault();
     // console.log(inputs[0].value,inputs[1].value,inputs[2].value,inputs[3].value,inputs[4].value)
     let card = document.createElement("div");
-    card.classList("card");
+    card.classList = "card";
 
     let profile = document.createElement("div");
-    profile.classList("profile-pic");
+    profile.classList = "profile-pic";
 
     card.appendChild(profile);
 
     let img = document.createElement("img");
-    img.setAttribute("src","https://images.unsplash.com/photo-1757105388973-3b3e58a4b5ee?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    img.setAttribute("src",inputs[0].value);
     
-    card.appendChild(img)
+    // card.appendChild(img);
+    
+    let h3 = document.createElement("h3");
+    h3.textContent = inputs[1].value
+
+    let h5 = document.createElement("h5");
+    h5.textContent = inputs[2].value
+
+    let p = document.createElement("p")
+    p.textContent = inputs[3].value;
+
+    profile.appendChild(img)
+    card.appendChild(profile)
+
+    card.appendChild(h3)
+    card.appendChild(h5)
+    card.appendChild(p)
+
+    main.appendChild(card);
+
+    if (inputs.value !== "submit") {
+        
+    }
+    inputs.forEach((inp)=>{
+        if (inp.type !== "submit") {
+        inp.value = ""
+
+        }
+    })
 })
