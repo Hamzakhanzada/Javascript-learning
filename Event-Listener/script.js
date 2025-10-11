@@ -40,14 +40,48 @@
     
 // })
 
-let h1 = document.querySelector("h1")
+// let h1 = document.querySelector("h1")
 
-window.addEventListener("keydown",function (dets) { 
-    if (dets.key === " ") {
-    h1.textContent = "SPC"
-    } else {
-    h1.textContent = `${dets.key}`
+// window.addEventListener("keydown",function (dets) { 
+//     if (dets.key === " ") {
+//     h1.textContent = "SPC"
+//     } else {
+//     h1.textContent = `${dets.key}`
 
-    }
-    // console.log(dets)
+//     }
+//     // console.log(dets)
+// })
+// let btn = document.querySelector(".btn")
+// let file = document.querySelector("#fileinp");
+
+// btn.addEventListener("click",function () {
+//     file.click()
+// })
+
+// file.addEventListener("change",function (dets) {
+//     const file = dets.target.files[0]
+//     if (file) {
+//     btn.textContent = file.name
+//     }
+// })
+
+
+let form = document.querySelector("form");
+let inputs = document.querySelectorAll("input");
+
+form.addEventListener("submit",function (dets) {
+    dets.preventDefault();
+    // console.log(inputs[0].value,inputs[1].value,inputs[2].value,inputs[3].value,inputs[4].value)
+    let card = document.createElement("div");
+    card.classList("card");
+
+    let profile = document.createElement("div");
+    profile.classList("profile-pic");
+
+    card.appendChild(profile);
+
+    let img = document.createElement("img");
+    img.setAttribute("src","https://images.unsplash.com/photo-1757105388973-3b3e58a4b5ee?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    
+    card.appendChild(img)
 })

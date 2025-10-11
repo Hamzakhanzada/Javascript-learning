@@ -21,12 +21,40 @@
         text-transform: capitalize;
     }
     #main {
-        display:flex;
-        justify-content: center;
-        align-items: center;
+      padding: 50px;
         height: 100%;
         width: 100%;
         background-color: cadetblue;
+    }
+    input {
+      display: block;
+    }
+    .btn {
+      background-color: aqua;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    .card {
+      margin-top: 40px;
+      border-radius: 10px;
+      display: inline-block;
+      padding: 20px;
+      border: 1px solid #e3e3e3;
+      max-width: 300px;
+
+    }
+    .profile-pic {
+     height: 40px;
+     width: 40px;
+     border-radius: 50%;
+
+    }
+    .profile-pic img {
+     height: 100%;
+     width: 100%;
+     border-radius: 50%;
+
     }
   </style>
   <body>
@@ -50,10 +78,30 @@
         <option value="corolla">Corolla</option>
     </select> -->
 
-    <div id="main">
+    <!-- <div id="main">
     <h1>A</h1>
+    </div> -->
+
+    <!-- <div id="main">
+    <input id="fileinp" type="file">
+      <button class="btn">Upload File</button>
+    </div> -->
+<div id="main">
+    <form action="">
+      <input type="text" placeholder="name">
+      <input type="text" placeholder="age">
+      <input type="text" placeholder="email">
+      <input type="text" placeholder="profile-pic">
+      <input type="submit" placeholder="submit">
+      <div class="card">
+        <div class="profile-pic">
+          <img src="https://plus.unsplash.com/premium_photo-1759793983996-96f9b8caa21a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <h3>Hamza</h3>
+        <h5>Web Developer</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      </div>
     </div>
-    
     <script src="script.js"></script>
   </body>
 </html>
