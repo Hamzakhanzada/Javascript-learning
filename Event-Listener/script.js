@@ -115,11 +115,20 @@
 //     })
 // })
 
-let box = document.querySelector(".box")
+// let box = document.querySelector(".box")
 
-box.addEventListener("mouseover",function () {
-    box.style.backgroundColor = "blue"
+// box.addEventListener("mouseover",function (dets) {
+//     box.style.top = dets.clientY + "px"
+//     box.style.left = dets.clientX + "px"
+// })
+
+
+
+let ul = document.querySelector("ul")
+ul.addEventListener("click",function (dets) {
+    dets.target.classList.toggle("lt")
 })
-box.addEventListener("mouseout",function () {
-    box.style.backgroundColor = "red"
-})
+
+
+
+
