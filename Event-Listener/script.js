@@ -66,51 +66,60 @@
 // })
 
 
-let form = document.querySelector("form");
-let inputs = document.querySelectorAll("input");
-let main =  document.querySelector("#main")
+// let form = document.querySelector("form");
+// let inputs = document.querySelectorAll("input");
+// let main =  document.querySelector("#main")
 
-form.addEventListener("submit",function (dets) {
-    dets.preventDefault();
-    // console.log(inputs[0].value,inputs[1].value,inputs[2].value,inputs[3].value,inputs[4].value)
-    let card = document.createElement("div");
-    card.classList = "card";
+// form.addEventListener("submit",function (dets) {
+//     dets.preventDefault();
+//     // console.log(inputs[0].value,inputs[1].value,inputs[2].value,inputs[3].value,inputs[4].value)
+//     let card = document.createElement("div");
+//     card.classList = "card";
 
-    let profile = document.createElement("div");
-    profile.classList = "profile-pic";
+//     let profile = document.createElement("div");
+//     profile.classList = "profile-pic";
 
-    card.appendChild(profile);
+//     card.appendChild(profile);
 
-    let img = document.createElement("img");
-    img.setAttribute("src",inputs[0].value);
+//     let img = document.createElement("img");
+//     img.setAttribute("src",inputs[0].value);
     
-    // card.appendChild(img);
+//     // card.appendChild(img);
     
-    let h3 = document.createElement("h3");
-    h3.textContent = inputs[1].value
+//     let h3 = document.createElement("h3");
+//     h3.textContent = inputs[1].value
 
-    let h5 = document.createElement("h5");
-    h5.textContent = inputs[2].value
+//     let h5 = document.createElement("h5");
+//     h5.textContent = inputs[2].value
 
-    let p = document.createElement("p")
-    p.textContent = inputs[3].value;
+//     let p = document.createElement("p")
+//     p.textContent = inputs[3].value;
 
-    profile.appendChild(img)
-    card.appendChild(profile)
+//     profile.appendChild(img)
+//     card.appendChild(profile)
 
-    card.appendChild(h3)
-    card.appendChild(h5)
-    card.appendChild(p)
+//     card.appendChild(h3)
+//     card.appendChild(h5)
+//     card.appendChild(p)
 
-    main.appendChild(card);
+//     main.appendChild(card);
 
-    if (inputs.value !== "submit") {
+//     if (inputs.value !== "submit") {
         
-    }
-    inputs.forEach((inp)=>{
-        if (inp.type !== "submit") {
-        inp.value = ""
+//     }
+//     inputs.forEach((inp)=>{
+//         if (inp.type !== "submit") {
+//         inp.value = ""
 
-        }
-    })
+//         }
+//     })
+// })
+
+let box = document.querySelector(".box")
+
+box.addEventListener("mouseover",function () {
+    box.style.backgroundColor = "blue"
+})
+box.addEventListener("mouseout",function () {
+    box.style.backgroundColor = "red"
 })
