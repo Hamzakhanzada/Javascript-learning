@@ -124,11 +124,24 @@
 
 
 
-let ul = document.querySelector("ul")
-ul.addEventListener("click",function (dets) {
-    dets.target.classList.toggle("lt")
-})
+// let ul = document.querySelector("ul")
+// ul.addEventListener("click",function (dets) {
+//     dets.target.classList.toggle("lt")
+// })
 
+
+let inp = document.querySelector("input");
+let span = document.querySelector("span")
+
+inp.addEventListener("input",function () {
+    let totalCount = 20 - inp.value.length;
+    span.textContent = totalCount
+    if (totalCount < 0) {
+        span.style.color = "red"
+    } else {
+        span.style.color = "black"
+    }
+})
 
 
 
