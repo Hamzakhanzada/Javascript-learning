@@ -1,0 +1,151 @@
+<!-- Simple responsive HTML form with semantic markup and CSS.
+     No JavaScript included — ready for you to attach your validation logic.
+     - Email input uses type="email" and required attribute
+     - Password input uses minlength and required attribute
+     - Helper elements with IDs are included so you can show validation messages from JS
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign In — Simple Form</title>
+  <style>
+    :root{
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --muted: #6b7280;
+      --danger: #dc2626;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    *{box-sizing: border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, var(--bg), #eef2ff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem;
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .card{
+      width:100%;
+      max-width:420px;
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 8px 30px rgba(15,23,42,0.08);
+      padding:1.75rem;
+    }
+
+    h1{font-size:1.25rem;margin:0 0 0.5rem}
+    p.lead{margin:0 0 1.25rem;color:var(--muted);font-size:0.95rem}
+
+    form{display:flex;flex-direction:column;gap:0.75rem}
+
+    .field{
+      display:flex;flex-direction:column;gap:0.35rem;
+    }
+
+    label{font-size:0.9rem}
+    input[type="email"], input[type="password"]{
+      appearance:none;
+      border:1px solid #e6eef8;
+      background:#fbfdff;
+      padding:0.65rem 0.75rem;
+      border-radius:8px;
+      font-size:0.95rem;
+      outline:none;
+      transition:box-shadow .15s, border-color .15s;
+    }
+
+    input:focus{
+      border-color: rgba(37,99,235,0.9);
+      box-shadow:0 4px 14px rgba(37,99,235,0.08);
+    }
+
+    .help{font-size:0.85rem;color:var(--muted)}
+
+    .row{
+      display:flex;align-items:center;justify-content:space-between;margin-top:0.25rem;
+    }
+
+    .btn{
+      display:inline-block;
+      border:0;
+      background:var(--accent);
+      color:white;
+      padding:0.7rem 0.9rem;
+      border-radius:10px;
+      font-weight:600;
+      font-size:0.95rem;
+      cursor:pointer;
+    }
+
+    .btn:active{transform:translateY(1px)}
+
+    .muted-link{font-size:0.9rem;color:var(--muted);text-decoration:none}
+
+    /* visible error message anchor for your JS to toggle */
+    .error{
+      color:var(--danger);
+      font-size:0.85rem;
+      display:none; /* toggle to block from JS when invalid */
+      margin-top:0.25rem;
+    }
+    .errors{
+      color:var(--danger);
+      font-size:0.85rem;
+      display:none; /* toggle to block from JS when invalid */
+      margin-top:0.25rem;
+    }
+
+    /* small responsive touch */
+    @media (max-width:420px){
+      .card{padding:1rem;border-radius:10px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Sign in to your account</h1>
+    <p class="lead">Enter your email and password. I'll leave validation to your JavaScript.</p>
+
+    <form id="authForm" autocomplete="off" novalidate>
+      <!-- Email -->
+      <div class="field">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email"  placeholder="you@example.com" />
+        <span id="emailError" class="error"></span>
+      </div>
+
+      <!-- Password -->
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password"  placeholder="Your password" />
+        <span class="help">Minimum 8 characters.</span>
+        <span id="passwordError" class="errors"></span>
+      </div>
+
+      <div class="row">
+        <button type="submit" class="btn">Sign in</button>
+      </div>
+
+      <div class="show-message">
+
+      </div>
+
+    </form>
+
+  </main>
+<script src="script.js"></script>
+  <!-- No JS included — you said you'll handle validation. 
+       Use the helper spans with IDs (#emailError, #passwordError) to show messages.
+       If you want an example validation script, tell me and I'll add it. -->
+</body>
+</html>
