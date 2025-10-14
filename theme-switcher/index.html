@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Switcher</title>
+</head>
+<style>
+ body {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  transition: 0.3s ease;
+}
+.light {
+    background-color: #fff;
+}
+
+/* Button style */
+#theme-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#theme-btn:hover {
+  opacity: 0.8;
+}
+
+/* Dark theme */
+body.dark {
+  background: #111;
+  color: #fff;
+}
+
+body.dark #theme-btn {
+  background: #fff;
+  color: #111;
+}
+
+</style>
+<body class="dark">
+  <button id="theme-btn">Toggle Theme</button>
+
+  <h1>Hello Hamza!</h1>
+  <p>This is your simple light/dark mode switcher setup.</p>
+
+<script src="script.js"></script>    
+</body>
+</html>
