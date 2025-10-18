@@ -105,10 +105,8 @@ function showCards() {
 
     const buttonsDiv = document.createElement("div");
     buttonsDiv.classList.add("buttons");
-    buttonsDiv.innerHTML = `
-      <button class="call"><i class="ri-phone-line"></i> Call</button>
-      <button class="msg">Message</button>
-    `;
+    buttonsDiv.innerHTML = ` <button class="call"><i class="ri-phone-line"></i> Call</button>
+      <button class="msg">Message</button> `;
     card.appendChild(buttonsDiv);
 
     stack.appendChild(card);
@@ -117,12 +115,12 @@ function showCards() {
   updateStack();
 }
 
-// UPDATE STACK LAYOUT
+// UPDATE STACK LAYOUT   
 function updateStack() {
   const cards = document.querySelectorAll(".stack .card");
 
   cards.forEach((card, i) => {
-    if (i < 3) {
+    if (i < 3) {     
       card.style.zIndex = 3 - i;
       card.style.transform = `translateY(${i * 10}px) scale(${1 - i * 0.02})`;
       card.style.opacity = `${1 - i * 0.02}`;
@@ -133,7 +131,6 @@ function updateStack() {
   });
 }
 
-// MOVE STACK UP
 upBtn.addEventListener("click", function () {
   let lastChild = stack.lastElementChild;
   if (lastChild) {
@@ -151,4 +148,4 @@ downBtn.addEventListener("click", function () {
   } 
 });
 
-showCards();
+showCards();  
