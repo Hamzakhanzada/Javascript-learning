@@ -13,6 +13,14 @@ class CreateBiscuit  {
       document.body.appendChild(h1);
     }
 
+    erase() {
+      document.querySelectorAll("h1").forEach((ele)=>{
+        if (ele.style.color === this.color) {
+          ele.remove();
+        }
+      })
+    }
+
 }
 
 let bis1 = new CreateBiscuit("Super","black",20,"peaksfirens");
