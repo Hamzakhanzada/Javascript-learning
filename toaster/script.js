@@ -11,12 +11,12 @@ function createToast(config) {
         setTimeout(() => {
             parent.removeChild(div);
         }, config.duration * 1000);
-    }
+    } 
 }
 
 let toaster =  createToast({
     positionX:"left",
-    positionY:"bottom",
+    positionY:"bottom",         
     theme:"dark",
     duration: 3
 })

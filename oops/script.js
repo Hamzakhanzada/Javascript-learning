@@ -14,4 +14,4 @@ CreatePencil.prototype.write = function (text) {
     }
 
 let pencil1 =  new CreatePencil("Dux",20,"black");
-let pencil2 =  new CreatePencil("Dollar",30,"red");
+let pencil2 =  new CreatePencil("Dollar",30,"red"); 

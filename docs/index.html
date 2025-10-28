@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toaster Demo</title>
-    <!-- Tailwind CDN: set config before the CDN script if you want to extend the theme -->
     <script>
         window.tailwind = window.tailwind || {};
         window.tailwind.config = { theme: { extend: { colors: { brand: '#2563eb' } } } };
@@ -18,11 +17,11 @@
 
             <div class="mb-4">
                 <div class="flex gap-3 justify-start">
-                    <button id="show-success" class ="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Success</button>
+                    <button id="show-success" class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Success</button>
                     <button id="show-info" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Info</button>
                     <button id="show-error" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Error</button>
                 </div>
-            </div> 
+            </div>
 
             <div class="text-sm text-gray-500">Click a button to show a toast. This page is intentionally minimal.</div>
         </section>
